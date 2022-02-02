@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Img.gd" type="Script" id=1]
+[ext_resource path="res://dlux 512-510.png" type="Texture" id=2]
+
+[node name="Img" type="Sprite"]
+position = Vector2( 98.9932, 259.404 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]
